@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -126,6 +125,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = Path.joinpath(BASE_DIR, 'static_CDN') # To separate these two type of folders "_CDN" added with the name
+MEDIA_URL = '/media/'
+MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')  # To separate these two type of folders "_CDN" added with the name
+
+# In the deployment we don't need the "STATICFILES_DIRS"
 STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'static'),
+    Path.joinpath(BASE_DIR, 'media'),
 ]
