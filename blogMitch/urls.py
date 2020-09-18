@@ -29,6 +29,8 @@ urlpatterns = [
     path('logout/', accountViews.logout_view, name='logout'),
     path('login/', accountViews.login_view, name='login'),
     path('account/', accountViews.account_view, name='account'),
+    path('blog/', include('blog.urls', 'blog')),
+
 
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
     path('password_change/done/',
