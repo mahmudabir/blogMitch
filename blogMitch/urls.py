@@ -30,6 +30,7 @@ urlpatterns = [
     path('login/', accountViews.login_view, name='login'),
     path('account/', accountViews.account_view, name='account'),
     path('blog/', include('blog.urls', 'blog')),
+    path('must_authenticate/', accountViews.must_authenticate_view, name='must_authenticate'),
 
 
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
@@ -47,8 +48,6 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
          name='password_reset_complete'),
 ]
-
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

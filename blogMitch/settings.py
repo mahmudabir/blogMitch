@@ -132,5 +132,5 @@ MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')  # To separate these two type of f
 # In the deployment we don't need the "STATICFILES_DIRS"
 STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'static'),
-    Path.joinpath(BASE_DIR, 'media'),
+    # Path.joinpath(BASE_DIR, 'media'),
 ]
