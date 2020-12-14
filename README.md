@@ -4,8 +4,8 @@
 
 USERNAME -------- PASSWORD -------- TYPE<br />
 
-admin -------------- adminadmin ----------- Admin<br />
-abir ----------------- adminadmin ------------ User<br />
+admin@gmail.com -------------- adminadmin ----------- Admin<br />
+abir@gmail.com ----------------- adminadmin ------------ User<br />
 
 
 
